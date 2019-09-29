@@ -6,17 +6,20 @@ import {InputBase,IconButton, Button, AppBar, Toolbar} from '@material-ui/core'
 import LINK from './links'
 
 class  Panel extends React.Component{
-    state = {
+  constructor(props){
+    super(props)
+    this.state = {
         isSearchOpen: false,
     }
-    openSearch = () =>{
+    this.openSearch = () =>{
         if(this.state.isSearchOpen === true){
             console.log("search happened!!!\n")
         }
         this.setState({isSearchOpen : true})
     }
-    closeSearch = () => this.setState({isSearchOpen: false})
-
+    this.closeSearch = () => this.setState({isSearchOpen: false})
+  }
+  
   render(){
     const {isSearchOpen} = this.state
     const {openSearch, closeSearch} = this

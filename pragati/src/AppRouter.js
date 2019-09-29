@@ -3,7 +3,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Home from './Components/Home'
 import Beauty from './Components/Beauty'
 import Trending from './Components/Trending'
-import Post from './Components/Profile'
+import Profile from './Components/Profile'
+import Login from './Components/Login'
+
 
 function AppRouter() {
     return (
@@ -11,9 +13,9 @@ function AppRouter() {
           <Route path="/" exact component={Home} />
           <Route path='/beauty' component={Beauty}/>
           <Route path='/trending' component={Trending}/>
-          <Route path='/profile' component={Post}/>
+          <Route path='/profile' component={Profile}/>
 
-          {/* <Route path="/r/" component={RegisterTabs} /> */}
+          <Route path="/login" component={Login} />
         
       </Router>
     );

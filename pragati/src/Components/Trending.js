@@ -1,12 +1,12 @@
 import React from 'react'
 import Panel from './Common/Panel'
-
-function Home(){
+import Footer from './Common/Footer';
+function Trending(){
     return(
     <div>
         <Panel />
-        {/* <div>this is the trending section!!</div> */}
+        <Footer />
         </div>
     )
 }
-export default Home
+export default Trending

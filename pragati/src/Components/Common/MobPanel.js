@@ -8,19 +8,22 @@ import { Link } from 'react-router-dom';
 import LINK from './links'
 
 class  Panel extends React.Component{
-    state = {
+  constructor(props){
+    super(props)
+    this.state = {
         isSearchOpen: false,
         isDrawerOpen : false,
     }
-    clickSearch = () =>{
+    this.clickSearch = () =>{
         if(this.state.isSearchOpen === true){
             console.log("search happened!!!\n")
         }
         this.setState({isSearchOpen : true})
     }
-    closeSearch = () => this.setState({isSearchOpen: false})
-    drawerOpen = () => this.setState({isDrawerOpen: true})
-    drawerClose = () => this.setState({isDrawerOpen: false})
+    this.closeSearch = () => this.setState({isSearchOpen: false})
+    this.drawerOpen = () => this.setState({isDrawerOpen: true})
+    this.drawerClose = () => this.setState({isDrawerOpen: false})
+  }
     render(){
       const {isSearchOpen, isDrawerOpen} = this.state
       const {clickSearch, closeSearch, drawerClose, drawerOpen} = this

@@ -1,21 +1,21 @@
 import React from 'react'
-import Mobile from './MobPanel'
-import Desktop from './DeskPanel'
+import Mob from './MobFooter'
+import Desk from './DeskFooter'
 import  Media from 'react-media';
 
-function Panel(){
+function Footer(){
     return (
         <div>
         <Media query={{ maxWidth: 800 }}>
-          {(matches) =>
+          {matches =>
             matches ? (
-              <Mobile />
+              <Mob />
             ) : (
-              <Desktop />
+              <Desk />
             )
           }
         </Media>
       </div>
     )
 }
-export default Panel
+export default Footer
